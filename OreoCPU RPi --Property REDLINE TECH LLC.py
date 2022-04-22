@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 
                                     ##########   GPIO Setup   ##########
 
-# Use the board layout for gpio headers rather than bcm
+# Use the bcm layout for gpio headers rather than board layout
 GPIO.setmode(GPIO.BCM) 
 
 # Define GPIO pins
