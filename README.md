@@ -1,5 +1,5 @@
 # OreoCPD
-Central Power Distribution Controller for Crown Vic Equiptment Console
+Central Power Distribution Controller for Crown Vic Equipment Console
 
 changelog.txt
 
