@@ -13,3 +13,5 @@ This program is built around the following hardware
 Once I figure the kinks out and get the nodemcu running as a proper AP, I will post images of everything.
 
 Pull the code, change it, make it better! Thats why we're here right? ;)
+
+plus im reaaaaaaly tired and don't even wanna make a readme.md lol
