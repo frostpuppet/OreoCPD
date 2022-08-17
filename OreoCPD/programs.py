@@ -4,7 +4,7 @@
 from devices import toggle
 import time
 
-###############     Programs        #############
+                                ###########   Programs    ###########
 
 #   Startup loop enables all devices by default... If no means to control the system are avalible, everything stays on, it's amazing!
 def default():
@@ -49,3 +49,49 @@ def daily_driver():
     toggle.nul_off()
     time.sleep(1)
     print("Daily Driver Profile Loaded \n")
+
+
+def demo():
+    ## Show some cool stuff this app can do ##
+    print("Demo Profile Selected \n")
+    toggle.sub_on()
+    time.sleep(1)
+    toggle.sub_off()
+    toggle.acc_on()
+    time.sleep(1)
+    toggle.acc_off()
+    toggle.inv_on()
+    time.sleep(1)
+    toggle.inv_off()
+    toggle.rad_on()
+    time.sleep(1)
+    toggle.rad_off()
+    toggle.lig_on()
+    time.sleep(1)
+    toggle.lig_off()
+    toggle.com_on()
+    time.sleep(1)
+    toggle.com_off()
+    toggle.sir_on()
+    time.sleep(1)
+    toggle.sir_off()
+    toggle.nul_on()
+    time.sleep(1)
+    toggle.nul_off()
+    time.sleep(1)
+    print("Demo Profile Loaded \n")
+
+    
+
+def all_off():
+    print("Shutting everything down...\n")
+    toggle.sub_off()
+    toggle.acc_off()
+    toggle.inv_off()
+    toggle.rad_off()
+    toggle.lig_off()
+    toggle.com_off()
+    toggle.sir_off()
+    toggle.nul_off()
+    time.sleep(1)
+    print("All devices are disabled...")

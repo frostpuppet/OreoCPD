@@ -4,7 +4,7 @@
 import time
 from nntplib import GroupInfo
 import RPi.GPIO as GPIO
-                                ###########    DEVICES   ##########
+                                ###########   Devices   ###########
 
 
 # Use the bcm layout for gpio headers rather than board
@@ -39,10 +39,10 @@ GPIO.setup(sir_pa, GPIO.OUT)
 GPIO.setup(null_func, GPIO.OUT)
 
 
-# Sanitize the GIPO headers in case one is active for some reason...
-## For example, a crash will cause whichever pins were 1 to remain active
-### When restarting the program it will automatically set everything to 0. 
-#### Clean slate sorta thing
+# Sanitize the GIPO headers in case one head is active for some reason...
+## For example, a crash will cause whichever pins were '1' to remain active
+### When restarting the program it will automatically set everything to '0'. 
+#### Allows us to start with a clean slate in layman's
 GPIO.output(sub_amp, GPIO.LOW)
 GPIO.output(fwd_acc, GPIO.LOW)
 GPIO.output(pwr_invt, GPIO.LOW)
@@ -53,17 +53,18 @@ GPIO.output(sir_pa, GPIO.LOW)
 GPIO.output(null_func, GPIO.LOW)
 
 
-                        ##############  toggle.  ###############
+                                ###########  Toggles  ###########
 
-                                ########## Activate and Deavtivate the Devices ##########
-                        ############## Turn devices Off ################
+########### Activate and Deavtivate the Devices ###########
+    ########### Turn devices Off ###########
 class toggle:
     ###  Civvie Stuff  ###
-    def sub_on():   # Define a function
+
+    def sub_on():                           # Define a function
         GPIO.output(sub_amp, GPIO.HIGH)     # Set the output for "function" to 1
-        print("Amplifier [Active] \n")     # Print to the console that the device has power
-        time.sleep(1)       # sleep for a second so we don't overload the power supply
-                            ## After all, the whole point of OreoCPD is to not blow fuses and melt stuff
+        print("Amplifier [Active] \n")      # Print to the console that the device has power
+        time.sleep(1)                       # sleep for a second so we don't overload the power supply
+                                            ## After all, the whole point of OreoCPD is to not blow fuses and melt stuff
 
 
     def acc_on():
@@ -83,8 +84,8 @@ class toggle:
         print("Radar [Active] \n")
         time.sleep(1)
 
-        ###  Poop Stuff ###
 
+        ###  Poop Stuff ###
 
     def lig_on():
         GPIO.output(lig_mod, GPIO.HIGH)
@@ -110,10 +111,10 @@ class toggle:
         time.sleep(1)
 
 
-                            ############## Turn Devices Off ################
+                                ########### Turn Devices Off ###########
+
 
         ### Civvie Stuff ###
-
 
     def sub_off():
         GPIO.output(sub_amp, GPIO.LOW)
@@ -138,8 +139,8 @@ class toggle:
         print("Radar [Inactive] \n")
         time.sleep(1)
 
-        ###  Poop Stuff  ###
 
+        ###  Poop Stuff  ###
 
     def lig_off():
         GPIO.output(lig_mod, GPIO.LOW)
